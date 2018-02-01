@@ -27,7 +27,7 @@ MacMobileApi.prototype.ensure = function (options, done) {
       }
     }, function (error, response, body) {
       if (error) {
-        return done(new Error('failed to query mac-mobile:' + err.message));
+        return done(new Error('failed to query mac-mobile:' + error.message));
       }
 
       if (response.statusCode !== 200) {
